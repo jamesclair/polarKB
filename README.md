@@ -22,6 +22,8 @@ Decisions:
 - A Contact can have many roles and a role can have many contacts associated.
 - A Job could have multiple interviews and each interviews could have multiple contacts that play different roles associated.
 - Compensation is job sepecific and hourly vs salary will drive yearly_earnings, bonus and equity are mostly informational for now (see deferred section) and will drive potential_yearly_earnings.
+- Use check constraints for character limits rather than varchar(x), see: https://stackoverflow.com/questions/4848964/difference-between-text-and-varchar-character-varying
+- 
 
 Deferred:
 
