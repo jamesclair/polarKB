@@ -15,16 +15,8 @@ services:
       POSTGRES_USER: "${DB_USERNAME}"
       PGDATA: /data/postgres
       POSTGRES_DB: "${DB_NAME}"
+    # command: -c config_file=/etc/postgresql.conf
     volumes:
       - data:/data/postgres
-  # yatodo:
-  #   build:
-  #     dockerfile: Dockerfile
-  #     args:
-  #       DESTINATION: dev
-  #   ports:
-  #     - 8081:8081
-  #   env_file: *env_file
-  #   environment:
-  #     DB_HOSTNAME: host.docker.internal
-    
+      # - ./postgresql.conf:/etc/postgresql.conf
+  

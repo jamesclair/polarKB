@@ -22,8 +22,11 @@ Decisions:
 - A Contact can have many roles and a role can have many contacts associated.
 - A Job could have multiple interviews and each interviews could have multiple contacts that play different roles associated.
 - Compensation is job sepecific and hourly vs salary will drive yearly_earnings, bonus and equity are mostly informational for now (see deferred section) and will drive potential_yearly_earnings.
+
+### Database Migrations
+
 - Use check constraints for character limits rather than varchar(x), see: https://stackoverflow.com/questions/4848964/difference-between-text-and-varchar-character-varying
-- 
+- Use timestamps for migration file prefixes, i.e.: `` https://www.jeremyjarrell.com/using-flyway-db-with-distributed-version-control/
 
 Deferred:
 
@@ -39,3 +42,6 @@ Deferred:
 - [ ] create an api for job opps CRUD
 - [ ] create a ui for job opps CRUD
 - [ ] host app for easier access on the go
+- [ ] automate prefixing migration files with a timestamp
+- [ ] enforce idempotence in migration scripts - may not be easily 100% acheivable
+- [ ] 

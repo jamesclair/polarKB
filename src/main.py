@@ -14,7 +14,7 @@ log.setLevel(LOG_LEVEL)
 
 # Connect to an existing database
 
-print()
+print("test")
 
 with psycopg.connect(c.DB_CONNECTION_STR) as conn:
 
@@ -24,7 +24,7 @@ with psycopg.connect(c.DB_CONNECTION_STR) as conn:
         # Execute a command: this creates a new table
         cur.execute(
             """
-            CREATE TABLE test (
+            CREATE TABLE IF NOT EXISTS test (
                 id serial PRIMARY KEY,
                 num integer,
                 data text
